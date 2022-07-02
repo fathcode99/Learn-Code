@@ -8,7 +8,7 @@
 </head>
 <style>
     div {
-        background-color: salmon; color: aqua;
+        background-color: salmon; color: white;
     }
     h3 {
         color: brown;
@@ -25,6 +25,16 @@
     .border {
         border: 2px ridge black; 
     }
+    #Div6 {
+        background-color: blueviolet;
+        transition: background-color 250ms ease-in-out;
+    }
+    #Div6:hover {
+        background-color: aqua;
+    }
+    p::first-line {
+        color: red;
+    }
 </style>
 <body>
     <div>1</div>
@@ -36,5 +46,10 @@
     <div id="Div4" class="border">Ini id Selector</div>
     <br>
     <div class="Div5 border">Ini Class selector</div>
+    <br>
+    <div id="Div6">Ini Hover</div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum vitae saepe, reprehenderit quaerat in, ipsam iure ullam aliquam non alias nisi id possimus, quod dicta quasi similique iusto expedita tenetur.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusantium magnam, perferendis reprehenderit deserunt odit vel nobis eaque harum nihil totam pariatur hic iure minus repellendus perspiciatis impedit! Voluptatum, id.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo officiis impedit aut voluptatem unde quia vel dignissimos dolor doloribus, id omnis non eaque tempora consequatur iste cupiditate consectetur, ab quas!</p>
 </body>
 </html>
