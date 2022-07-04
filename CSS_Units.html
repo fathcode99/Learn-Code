@@ -16,13 +16,38 @@
     span {
         font-size: 2em;
     }
+    .vw {
+        border:1px solid blue;
+        width: 50vw;
+    }
+    .vh {
+        border: 1px solid blue;
+        height: 25vh;
+    }
+    .parent {
+        width : 200px;
+        height: 200px;
+        border : 2px solid blue;
+        background-color: blueviolet;
+    }
+    .percent {
+        background-color: aqua;
+        height: 50%;
+    }
 </style>
 <body>
+    <div class="vh">Ini contoh view height</div>
     <p style="font-size: 20px;"> Ini adalah sebuah text </p>
     <p style="font-size: 30px;">Ini adalah sebuah text</p>
     <div>Ini kalimat di dalam div
         <span>Ini kalimat di dalam span</span>
     </div>
-    
+    <p id="rem" style="font-size: 2rem;">Ini kalimat pakai rem</p>
+
+    <div class="vw">Contoh view Width</div>
+    <br>
+    <div class="parent">
+        <div class="percent" >Contoh percent</div>
+    </div>
 </body>
 </html>
