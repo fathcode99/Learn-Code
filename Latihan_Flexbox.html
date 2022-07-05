@@ -18,9 +18,7 @@
         height: 90vh;
         /*background-color: lightgray;*/
         display: flex;
-        flex-direction: column;
-        border: 1px solid black;
-        padding: 10px;
+        flex-direction: column; 
     }
     .header {
         background-color: aqua;
@@ -43,26 +41,58 @@
         display: flex;
         
     }
-    .content div:first-child {
-        background-color: green;
+    .sidebar {
+        background-color: wheat;
         flex-basis: 25%;
         margin: 10px;
     }
-    .content div:nth-child(2) {
-        background-color: aqua;
+    
+    .sidebar2 {
+        background-color: salmon;
+        flex-basis: 25%;
+        margin: 10px;
+    }
+
+    .middle {
         flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
         margin: 10px;
     }
-    .content div:last-child {
+    
+    .middle-top {
+        flex-basis: 50%;
+        background-color: tomato;
+        margin-bottom: 10px;
+    }
+    .middle-bot {
+        flex-basis: 50%;
+        margin-top: 10px;
+        display: flex;
+    }
+
+    .content2 {
         background-color: blueviolet;
-        flex-basis: 25%;
-        margin: 10px;
+        flex-basis: 50%;
+        margin-right: 10px;
+    }
+    .content3 {
+        background-color: yellowgreen;
+        flex-basis: 50%;
+        margin-left: 10px;
     }
     .footer {
         background-color: saddlebrown;
         flex-basis: 15%;
         margin: 10px;
     }
+
+    .header, .nav div, .sidebar, .middle-top, .middle-bot div, .sidebar2, .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
 </style>
 <body>
     <div class="main-container">
@@ -73,14 +103,19 @@
             <div class="nav3">Nav-3</div>
             <div class="nav4">Nav-4</div>
         </div>
+
         <div class="content">
             <div class="sidebar">sidebar</div>
             <div class="middle">
-                <div class="middletop">Content 1</div>
-                <div class="middlebot">Content 2</div>
+                <div class="middle-top">content 1</div>
+                <div class="middle-bot">
+                        <div class="content2">content 2</div>
+                        <div class="content3">content 3</div>
+                </div>
             </div>
             <div class="sidebar2">sidebar2</div>
         </div>
+
         <div class="footer">Footer</div>
     </div>
 </body>
