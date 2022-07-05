@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 20px;
+    }
+    .main-container {
+        width: 60vw;
+        height: 90vh;
+        /*background-color: lightgray;*/
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .header {
+        background-color: aqua;
+        flex-basis: 10%;
+        margin: 10px;
+    }
+    .nav {
+        flex-basis: 5%;
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav div {
+        background-color: salmon;
+        width: 20%;
+    }
+    .content {
+        flex-basis: 55%;
+        margin: 10px;
+        display: flex;
+        
+    }
+    .content div:first-child {
+        background-color: green;
+        flex-basis: 25%;
+        margin: 10px;
+    }
+    .content div:nth-child(2) {
+        background-color: aqua;
+        flex-basis: 50%;
+        margin: 10px;
+    }
+    .content div:last-child {
+        background-color: blueviolet;
+        flex-basis: 25%;
+        margin: 10px;
+    }
+    .footer {
+        background-color: saddlebrown;
+        flex-basis: 15%;
+        margin: 10px;
+    }
+</style>
+<body>
+    <div class="main-container">
+        <div class="header">Header</div>
+        <div class="nav">
+            <div class="nav1">Nav-1</div>
+            <div class="nav2">Nav-2</div>
+            <div class="nav3">Nav-3</div>
+            <div class="nav4">Nav-4</div>
+        </div>
+        <div class="content">
+            <div class="sidebar">sidebar</div>
+            <div class="middle">
+                <div class="middletop">Content 1</div>
+                <div class="middlebot">Content 2</div>
+            </div>
+            <div class="sidebar2">sidebar2</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
