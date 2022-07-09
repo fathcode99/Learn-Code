@@ -1,6 +1,5 @@
 * {
     font-family: 'Mulish', sans-serif;
-    box-s
 }
 body {
     margin: 0;
@@ -10,12 +9,12 @@ body {
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: rgba(187, 107, 217, .1);
-    padding: 24px 100px;
+    padding: 24px 0;
 }
 
-.nav-brand {
+/* .nav-brand {
     font-family: 'Lato';
     font-size: 24px;
     font-weight: 700;
@@ -29,7 +28,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
 }
 
 .nav-link a {
@@ -83,7 +81,7 @@ body {
     color: #ffffff;
     background-color: #f53835;
     cursor: pointer;
-}
+} */
 
 /* CSS_Title Space */
 
