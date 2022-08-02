@@ -8,7 +8,7 @@ class ToDoItem extends React.Component{
     render() {
         return(
             <div style={styles.container}>
-                <p style={styles.p}> Makan </p>
+                <p style={styles.p}>ID : {this.props.data.id} - {this.props.data.name}</p>
                 <div>
                     <Button variant="danger" className="me-2">Delete</Button>
                     <Button variant="success">Complete</Button>
