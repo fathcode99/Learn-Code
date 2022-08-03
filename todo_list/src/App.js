@@ -42,7 +42,7 @@ class App extends React.Component{
           this.state.activities.map(item => {
             return (
               <ToDoItem 
-                data={item}
+                ayam={item}
                 key={item.id}
                 delete={() => this.onDelete(item.id)}
               />)

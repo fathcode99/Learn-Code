@@ -1,11 +1,6 @@
 {
   "activities": [
     {
-      "id": 1,
-      "name": "Tidur",
-      "isCompleted": false
-    },
-    {
       "id": 2,
       "name": "Coding",
       "isCompleted": false
