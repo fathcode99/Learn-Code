@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 import {
   Form,
   Button
@@ -11,21 +12,28 @@ class App extends React.Component{
       constructor(props){
         super(props)
         this.state = {
-          activities: [
-            {id : 1, name : 'Makan'},
-            {id : 2, name : 'Tidur'},
-            {id : 3, name : 'Coding'},
-            {id : 4, name : 'Ngopi'},
-          ]
+          activities: [ ]
         }
       }
 
+      fetchData = () => {
+        Axios.get('http://localhost:2000/activities')
+        .then(res => {
+          this.setState({activities:res.data})
+        })
+        .catch(err => console.log(err))
+      }
+
+      componentDidMount() {
+        this.fetchData()
+      }
       
       onDelete = (id) => {
-        let tempArr = this.state.activities.filter(item => {
-          return item.id !== id
-        }) 
-        this.setState({ activities : tempArr})
+        Axios.delete(`http://localhost:2000/activities/${id}`)
+        .then(res => {
+          console.log(res.data)
+          this.fetchData()
+        })
 
       }
       
@@ -41,18 +49,23 @@ class App extends React.Component{
           })
         )
       }
-      onAdd = () => {
-        // mempersiapkan data to do baru dan id nya
-        let newTodo = this.refs.todo.value
-        let id = this.state.activities.length + 1
-        
-        // menyiapkan array untuk state yg baru, sebagai penampung krn tdk bisa langsung edit state
-        let tempArr = [...this.state.activities]
 
-        // menambahkan data baru ke array tempArr
-        tempArr.push({id, name : newTodo})
-        // console.log(tempArr)
-        this.setState({activities: tempArr})
+      onAdd = () => {
+        // mempersiapkan data to do baru (utk ID sudah otomatis)
+        let newTodo = this.refs.todo.value
+        
+        // siapkan objek
+        let obj = {
+          name : newTodo,
+          isCompleted : false
+        }
+
+        // menambahkan data baru ke dg.json
+        Axios.post('http://localhost:2000/activities', obj)
+        .then(res => {
+          console.log(res.data)
+          this.fetchData()
+        })
 
         // untuk mengosongkan kembali fomr control
         this.refs.todo.value = ''

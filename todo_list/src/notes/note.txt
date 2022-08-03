@@ -1,0 +1,9 @@
+Life Cycle Method
+
+1. Ketika component pertama kali mount (terpasang), dia akan memanggil render
+2. render akan terpanggil ketika ada perubahan state atau props
+3. componentDidMount akan terpanggil hanya sekali setelah render terpanggil pertama kali
+4. componentDidUpdate akan terpanggil SETELAH ada perubahan state
+5. componentWillUnmount akan terpanggil setelah component di unmount (di remove / delete)
+
+https://zetcode.com/javascript/jsonserver/
