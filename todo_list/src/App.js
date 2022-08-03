@@ -20,18 +20,31 @@ class App extends React.Component{
         }
       }
 
+      
+      onDelete = (id) => {
+        let tempArr = this.state.activities.filter(item => {
+          return item.id !== id
+        }) 
+        this.setState({ activities : tempArr})
+
+      }
+      
       showData = () => {
         return (
           this.state.activities.map(item => {
-            return <ToDoItem data={item} />
+            return (
+              <ToDoItem 
+                data={item}
+                key={item.id}
+                delete={() => this.onDelete(item.id)}
+              />)
           })
         )
       }
-
       onAdd = () => {
         // mempersiapkan data to do baru dan id nya
         let newTodo = this.refs.todo.value
-        let id = this.state.activities[this.state.activities.length-1].id + 1
+        let id = this.state.activities.length + 1
         
         // menyiapkan array untuk state yg baru, sebagai penampung krn tdk bisa langsung edit state
         let tempArr = [...this.state.activities]
