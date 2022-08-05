@@ -45,6 +45,7 @@ class App extends React.Component{
                 ayam={item}
                 key={item.id}
                 delete={() => this.onDelete(item.id)}
+                complete={() => this.onComplete(item.id)}
               />)
           })
         )
@@ -69,6 +70,14 @@ class App extends React.Component{
 
         // untuk mengosongkan kembali fomr control
         this.refs.todo.value = ''
+      }
+
+      onComplete = (id) => {
+        Axios.patch(`http://localhost:2000/activities/${id}`, {isCompleted : true})
+        // Kalau Axios.put dia akan berfungsi untuk mengganti semuanya
+        .then(res => {
+          this.fetchData()
+        })
       }
 
       render () {

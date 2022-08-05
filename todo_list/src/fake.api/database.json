@@ -1,19 +1,29 @@
 {
   "activities": [
     {
-      "id": 2,
+      "id": 1,
       "name": "Coding",
-      "isCompleted": false
+      "isCompleted": true
+    },
+    {
+      "id": 2,
+      "name": "Ngopi",
+      "isCompleted": true
     },
     {
       "id": 3,
-      "name": "Ngopi",
-      "isCompleted": false
+      "name": "Ngunyah",
+      "isCompleted": true
     },
     {
-      "name": "Help",
-      "isCompleted": false,
+      "name": "Makan",
+      "isCompleted": true,
       "id": 4
+    },
+    {
+      "name": "Ngombe",
+      "isCompleted": true,
+      "id": 5
     }
   ]
 }
