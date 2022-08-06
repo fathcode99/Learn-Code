@@ -8,11 +8,11 @@ class ToDoItem extends React.Component{
     render() {
         return(
             <div style={styles.container}>
-                <p style={styles.p}>ID : {this.props.ayam.id} - {this.props.ayam.name}</p>
+                <p style={styles.p}>ID : {this.props.data.id} - {this.props.data.name}</p>
                 <div>
                     <Button variant="danger" onClick={this.props.delete} className="me-2">Delete</Button>
-                    <Button variant="success" onClick={this.props.complete} disabled={this.props.ayam.isCompleted}>
-                        {this.props.ayam.isCompleted  ? "Finished" : "Completed"}
+                    <Button variant="success" onClick={this.props.complete} disabled={this.props.data.isCompleted}>
+                        {this.props.data.isCompleted  ? "Finished" : "Completed"}
                     </Button>
                 </div>
             </div>

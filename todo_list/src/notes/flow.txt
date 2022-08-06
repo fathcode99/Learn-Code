@@ -1,0 +1,18 @@
+1. App.js di panggil, lalu dia merender component navigation bar dan todopages
+2. yg terjadi di navigation bar, componentnya akan di render kemudian
+akan di connect ke redux
+3. yg terjadi di todopages, componentnya akan di render, dan 
+di connect ke redux
+4. componentDidMount jalan, lalu menjalankan fetch data
+5. function fetchData mengambil data dari json server, kemudian datanya
+di kirim melalui action getData
+6. di action getData akan menghasilkan sebuah object yg berisi type dan payload,
+dimanan nanti typenya akan di sesuaikan dg case yg ada di reducer dan 
+payload akan berisi data ddari hasil axios 
+7. object hasil getData akan di teruskan ke todo reducer 
+8. sesampainya di todo reducer, case akan dijalankan sesuai type 
+yg di terima. yaitu 'GET_DATA'
+9. case utk type 'GET_DATA' mengisi data aktivities dg data hasil
+get axios yg di bawa oleh payload
+10. ketika data di todoreducer berubah, maka render akan di jalankan lagi
+11. sehingga data yg sekarang adalah hasil dari data redux yg sudah berubah
