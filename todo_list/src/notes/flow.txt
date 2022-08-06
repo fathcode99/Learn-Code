@@ -8,7 +8,7 @@ di connect ke redux
 di kirim melalui action getData
 6. di action getData akan menghasilkan sebuah object yg berisi type dan payload,
 dimanan nanti typenya akan di sesuaikan dg case yg ada di reducer dan 
-payload akan berisi data ddari hasil axios 
+payload akan berisi data dari hasil axios 
 7. object hasil getData akan di teruskan ke todo reducer 
 8. sesampainya di todo reducer, case akan dijalankan sesuai type 
 yg di terima. yaitu 'GET_DATA'

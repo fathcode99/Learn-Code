@@ -8,11 +8,11 @@ import {
 import { connect } from 'react-redux'
 
 // import component
-// import ToDoItem from '../component/ToDoItem'
 import ToDoItem from '../component/ToDoItem'
 
 // import action
 import { getData } from '../redux/actions'
+
 
 class TodoPages extends React.Component {
 
@@ -94,7 +94,6 @@ class TodoPages extends React.Component {
           />
           <Button variant="primary" onClick={this.onAdd} className='ms-2'>Add</Button>
         </div>
-
       </div>
     )
   }
