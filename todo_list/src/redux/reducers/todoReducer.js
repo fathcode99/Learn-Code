@@ -1,6 +1,5 @@
 let INITIAL_STATE = {
-    activities : [],
-    value : []
+    activities : []
 }
 
 const todo = (state = INITIAL_STATE, action) => {
@@ -9,21 +8,6 @@ const todo = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 activities:action.payload
-            }
-        case 'GET_DATAB' :
-            return {
-                ...state,
-                value:action.payload
-            }
-        case 'ADD_VALUE' :
-            return {
-                ...state,
-                value:state.value + 1
-            }
-        case 'MIN_VALUE' :
-            return {
-                ...state,
-                value:state.value -1
             }
         default:
             return state

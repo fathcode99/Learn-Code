@@ -1,24 +1,58 @@
-export const getData = (data) => {
-    return {
-        type : 'GET_DATA',
-        payload : data
+import Axios from 'axios'
+
+export const getData = () => {
+    return (dispatch) => {
+        Axios.get('http://localhost:2000/activities')
+            .then(res => {
+                dispatch({
+                    type: 'GET_DATA',
+                    payload: res.data
+                })
+            })
     }
 }
 
-export const getDatab = (data) => {
-    return {
-        type : 'GET_DATAB',
-        payload : parseInt(data)
+export const addData = (obj) => {
+    return (dispatch) => {
+        Axios.post('http://localhost:2000/activities', obj)
+            .then(res => {
+                Axios.get('http://localhost:2000/activities')
+                    .then(res => {
+                        dispatch({
+                            type: 'GET_DATA',
+                            payload: res.data
+                        })
+                    })
+            })
     }
 }
 
-export const addValue = () => {
-    return {
-        type :'ADD_VALUE',
+export const delData = (id) => {
+    return (dispatch) => {
+        Axios.delete(`http://localhost:2000/activities/${id}`)
+            .then(res => {
+                Axios.get('http://localhost:2000/activities')
+                    .then(res => {
+                        dispatch({
+                            type: 'GET_DATA',
+                            payload: res.data
+                        })
+                    })
+            })
     }
 }
-export const minValue = () => {
-    return {
-        type :'MIN_VALUE',
+
+export const compData = (id) => {
+    return (dispatch) => {
+        Axios.patch(`http://localhost:2000/activities/${id}`, { isCompleted: true })
+            .then(res => {
+                Axios.get('http://localhost:2000/activities')
+                    .then(res => {
+                        dispatch({
+                            type: 'GET_DATA',
+                            payload: res.data
+                        })
+                    })
+            })
     }
 }

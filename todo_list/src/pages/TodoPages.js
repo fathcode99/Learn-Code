@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+// import Axios from 'axios';
 import {
   Form,
   Button
@@ -11,18 +11,13 @@ import { connect } from 'react-redux'
 import ToDoItem from '../component/ToDoItem'
 
 // import action
-import { getData } from '../redux/actions'
+import { getData, addData, delData, compData } from '../redux/actions'
 
 
 class TodoPages extends React.Component {
 
   fetchData = () => {
-    Axios.get('http://localhost:2000/activities')
-      .then(res => {
-        // kirim res.data ke todoReducer dengan action getData
-        this.props.getData(res.data)
-      })
-      .catch(err => console.log(err))
+    this.props.getData()
   }
 
   componentDidMount() {
@@ -30,11 +25,7 @@ class TodoPages extends React.Component {
   }
 
   onDelete = (id) => {
-    Axios.delete(`http://localhost:2000/activities/${id}`)
-      .then(res => {
-        console.log(res.data)
-        this.fetchData()
-      })
+    this.props.delData(id)
 
   }
 
@@ -63,22 +54,14 @@ class TodoPages extends React.Component {
     }
 
     // menambahkan data baru ke dg.json
-    Axios.post('http://localhost:2000/activities', obj)
-      .then(res => {
-        console.log(res.data)
-        this.fetchData()
-      })
+    this.props.addData(obj)
 
     // untuk mengosongkan kembali fomr control
     this.refs.todo.value = ''
   }
 
   onComplete = (id) => {
-    Axios.patch(`http://localhost:2000/activities/${id}`, { isCompleted: true })
-      // Kalau Axios.put dia akan berfungsi untuk mengganti semuanya
-      .then(res => {
-        this.fetchData()
-      })
+    this.props.compData(id)
   }
 
   render() {
@@ -115,4 +98,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, { getData })(TodoPages)
+export default connect(mapStateToProps, { getData, addData, delData, compData })(TodoPages)
