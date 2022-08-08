@@ -17,7 +17,6 @@ class AddMin extends React.Component {
                 <h3>{this.props.nilai}</h3>
                 <Button variant="success" onClick={this.props.addValue} className="m-2"> + </Button>
             </div>
-
         )
     }
 }

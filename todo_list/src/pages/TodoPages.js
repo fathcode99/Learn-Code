@@ -35,7 +35,6 @@ class TodoPages extends React.Component {
         console.log(res.data)
         this.fetchData()
       })
-
   }
 
   showData = () => {
