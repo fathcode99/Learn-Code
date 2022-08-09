@@ -1,10 +1,10 @@
 import Axios from 'axios'
 
 export const getData = () => {
-    return (dispatch) => {
+    return (dispa) => {
         Axios.get('http://localhost:2000/activities')
             .then(res => {
-                dispatch({
+                dispa({
                     type: 'GET_DATA',
                     payload: res.data
                 })
