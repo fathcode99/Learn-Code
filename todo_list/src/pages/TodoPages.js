@@ -102,7 +102,7 @@ const TodoPages = () => {
             {item.isEdit ?
               <div style={styles.container}>
                 <Form.Control
-                  placeholder="Input New To Do" type="text" id="newEdit"
+                  placeholder={item.name} type="text" id="newEdit"
                 />
                 <div>
                   <Button variant="success" className="me-2" onClick={() => onDone(item.id)}>

@@ -17,6 +17,18 @@
       "isCompleted": false,
       "id": 3,
       "isEdit": false
+    },
+    {
+      "name": "Olahraga",
+      "isCompleted": false,
+      "id": 4,
+      "isEdit": false
+    },
+    {
+      "name": "Makan Nasi",
+      "isCompleted": false,
+      "id": 5,
+      "isEdit": false
     }
   ]
 }
