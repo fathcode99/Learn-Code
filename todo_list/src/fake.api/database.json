@@ -3,17 +3,20 @@
     {
       "id": 1,
       "name": "Coding",
-      "isCompleted": true
+      "isCompleted": false,
+      "isEdit": false
     },
     {
       "id": 2,
       "name": "Ngopi",
-      "isCompleted": true
+      "isCompleted": false,
+      "isEdit": false
     },
     {
-      "name": "Keren",
+      "name": "Minum Jamu",
       "isCompleted": false,
-      "id": 4
+      "id": 3,
+      "isEdit": false
     }
   ]
 }
