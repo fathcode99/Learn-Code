@@ -11,15 +11,9 @@
       "isCompleted": true
     },
     {
-      "id": 3,
-      "name": "Ngunyah",
-      "isCompleted": true
-    },
-    {
-      "name": "Makan",
-      "isCompleted": true,
+      "name": "Keren",
+      "isCompleted": false,
       "id": 4
     }
-  ],
-  "value" : [0]
+  ]
 }
